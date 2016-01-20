@@ -1,8 +1,8 @@
 import datetime
 from django.utils import timezone
 
-from models import ContactMessage
-import .defaults as defs
+from .models import ContactMessage
+from . import defaults as defs
 
 
 def check_email(email, from_host, from_email):

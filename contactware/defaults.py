@@ -2,10 +2,10 @@ from django.conf import settings
 
 # templates to render the message subject with
 CONTACTWARE_MESSAGE_SUBJECT_TEMPLATE = getattr(settings,
-        'CONTACTWARE_MESSAGE_SUBJECT_TEMPLATE', "contact/contact_message_subject.txt")
+        'CONTACTWARE_MESSAGE_SUBJECT_TEMPLATE', "contact/message_subject.txt")
 # template to render the message body with
 CONTACTWARE_MESSAGE_BODY_TEMPLATE = getattr(settings,
-        'CONTACTWARE_MESSAGE_BODY_TEMPLATE', 'contact/contact_message_body.txt')
+        'CONTACTWARE_MESSAGE_BODY_TEMPLATE', 'contact/message_body.txt')
 
 
 # default from email
