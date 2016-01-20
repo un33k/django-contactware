@@ -31,14 +31,11 @@ class ContactFormView(CsrfProtectMixin, CreateView):
         return super(ContactFormView, self).form_valid(form)
 
     def get_initial(self):
-        initial = super(ContactFormView, self).get_initial()
-        if not self.request.user.is_authenticated():
-            return initial
-        initial = initial.copy()
-        initial['name'] = self.request.user.get_full_name()
-        initial['email'] = self.request.user.email
-        initial['subject'] = self.request.GET.get('page_title', '')
+        initial = super(ContactFormView, self).get_initial().copy()
         initial['referrer'] = self.request.META.get('HTTP_REFERER', 'Unknown')
+        if self.request.user.is_authenticated():
+            initial['name'] = self.request.user.get_full_name()
+            initial['email'] = self.request.user.email
         return initial
 
 
