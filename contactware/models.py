@@ -37,7 +37,17 @@ class ContactMessage(models.Model):
         validators=[MinLengthValidator(10), MaxLengthValidator(750)],
     )
 
-    referrer = models.CharField(_('referrer'), max_length=254, blank=True)
+    referrer = models.CharField(
+        _('referrer'),
+        max_length=254,
+        blank=True
+    )
+
+    identifier = models.CharField(
+        _('Identifier'),
+        max_length=15,
+        blank=True
+    )
 
     def __str__(self):
         return '{}-{}'.format(self.name, self.email)

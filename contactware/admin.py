@@ -11,6 +11,7 @@ class ContactMessageAdmin(admin.ModelAdmin):
         'email',
         'subject',
         'message',
+        'identifier',
         'referrer',
         'updated_at',
         'created_at',

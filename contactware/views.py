@@ -13,8 +13,9 @@ from . import signals
 
 
 class ContactFormView(CsrfProtectMixin, CreateView):
-    """ Contact form view """
-
+    """
+    Contact form view.
+    """
     form_class = ContactForm
     model = ContactMessage
     template_name = 'contact/form.html'
@@ -40,8 +41,9 @@ class ContactFormView(CsrfProtectMixin, CreateView):
 
 
 class ContactMessageSentView(TemplateView):
-    """ Message sent """
-
+    """
+    Message sent.
+    """
     template_name = 'contact/confirmation.html'
 
     def get_context_data(self, **kwargs):
