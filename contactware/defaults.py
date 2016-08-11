@@ -21,11 +21,11 @@ CONTACTWARE_SITE_PROTOCOL = getattr(settings, 'SITE_PROTOCOL', '')
 
 # Send emails out or just store them in the database
 CONTACTWARE_SEND_EMAIL = getattr(settings, 'CONTACTWARE_SEND_EMAIL', True)
-# Verify existance of sender's email address
+# Verify existence of sender's email address
 CONTACTWARE_VERIFY_EMAIL = getattr(settings, 'CONTACTWARE_VERIFY_EMAIL', False)
 
 
-# Wether to save the messages in the database or not
+# Whether to save the messages in the database or not
 CONTACTWARE_STORE_DB = getattr(settings, 'CONTACTWARE_STORE_DB', True)
 # Expire (remove) contacts that are older than CONTACTWARE_EXPIRY_DAYS from the database
 CONTACTWARE_EXPIRY_DAYS = getattr(settings, 'CONTACTWARE_EXPIRY_DAYS', 365)
