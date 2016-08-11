@@ -1,4 +1,9 @@
 
+## 1.0.1
+
+BugFix:
+  - Fix ValidationError imports
+
 ## 1.0.0
 
 Enhancement:

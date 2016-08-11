@@ -41,9 +41,9 @@ class ContactForm(CleanSpacesMixin, forms.ModelForm):
             self.fields['email'].initial = self.request.user.email
 
         if not defs.CONTACTWARE_DEFAULT_FROM_EMAIL:
-            raise ValidationError(_("You need to set DEFAULT_FROM_EMAIL in your settings"))
+            raise forms.ValidationError(_("You need to set DEFAULT_FROM_EMAIL in your settings"))
         if not defs.CONTACTWARE_DEFAULT_TO_EMAILS:
-            raise ValidationError(_("You need to set MANAGERS in your settings"))
+            raise forms.ValidationError(_("You need to set MANAGERS in your settings"))
 
         self.subject_template = defs.CONTACTWARE_MESSAGE_SUBJECT_TEMPLATE
         self.body_template = defs.CONTACTWARE_MESSAGE_BODY_TEMPLATE
